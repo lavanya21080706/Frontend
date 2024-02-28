@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap');
+
+.container {
+    display: flex;
+    width: 100%;
+  }
+  
+.rightContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    height: 100vh;
+    margin: 2rem 2rem 2rem 2rem;
+  }
+
+.account {
+    width: 192px;
+    height: 26px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 19.3px;
+    text-align: center;
+    color: #828282;
+}
+
+.nameContainer, .emailContainer{
+    position: relative;
+    width: 30rem;
+    height: 4rem;
+    margin-top: 0%;
+    margin-bottom: 0.5rem;
+    margin-left: 2rem;
+}
+
+.name, .email {
+    position: absolute;
+    margin-left: 0%;
+    width: 400.4px;
+    height: 40.1px;
+    border: solid #d0d0d0;
+    border-radius: 1rem;
+    padding-left: 3.5rem;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+    color: black;
+}
+
+.profileIcon{
+    position: absolute;
+    margin-top: 1.5rem;
+    left: 1rem;
+    transform: translateY(-50%);
+}
+
+.confirmPassword,.password{
+  width: 400.4px;
+  height: 40.1px;
+  margin-left: 1rem;
+  border: solid #d0d0d0;
+  border-radius: 1rem;
+  padding-left: 3.5rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  color: black;
+}
+
+.confirmPasswordContainer,.passwordContainer{
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+  }
+
+  .register {
+    font-family: "Open Sans", sans-serif;
+    font-size: 33.1px;
+    margin-top: 4rem;
+    padding: 0%;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #343434;
+  }
+
+  .lockIcon {
+    position: absolute;
+    margin-top: 0.3rem;
+    margin-left: 2rem
+  }
+  
+  
+  .viewIcon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 0.4rem;
+    margin-right: 1rem;
+  }
+
+  .mailIcon {
+    position: absolute;
+    margin-top: 1.5rem;
+    left: 1rem;
+    transform: translateY(-50%);
+  }
+
+  
+.loginButton,
+.registerButton {
+  margin-left: 1rem;
+  margin-top: 1rem;
+  width: 470.4px;
+  height: 55.1px;
+  background-color: #17a2b8;
+  border: solid white;
+  border-radius: 5rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+}
+
+.loginButton {
+  margin-top: 0%;
+  background-color: #fff;
+  border: solid #17a2b8;
+  color: #17a2b8
+}

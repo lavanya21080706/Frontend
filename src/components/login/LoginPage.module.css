@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;1,600&display=swap');
+
+.container {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.loginText {
+  font-family: "Open Sans", sans-serif;
+  font-size: 2rem;
+  margin-top: 7rem;
+  margin-bottom: 3rem;
+  padding: 0%;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #343434;
+}
+
+.rightContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  height: 100vh;
+  margin: 2rem 2rem 2rem 2rem;
+}
+
+.emailContainer {
+  position: relative;
+  width: 30rem;
+  height: 4rem;
+  margin-top: 0%;
+  /* margin-bottom: 1rem; */
+  margin-left: 2rem;
+}
+
+.email,
+.password {
+  width: 25rem;
+  height: 3.1rem;
+  margin-left: 1rem;
+  border: solid #d0d0d0;
+  border-radius: 1rem;
+  padding-left: 3.5rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  color: black;
+}
+
+.email {
+  position: absolute;
+  margin-left: 0%;
+}
+
+.mailIcon {
+  position: absolute;
+  margin-top: 1.7rem;
+  left: 1rem;
+  transform: translateY(-50%);
+}
+
+.passwordContainer {
+  position: relative;
+  display: inline-block;
+  margin-top: 1rem; 
+}
+
+.lockIcon {
+  position: absolute;
+  margin-top: 0.5rem;
+  margin-left: 2rem
+}
+
+
+.viewIcon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 0.6rem;
+  margin-right: 1rem;
+}
+
+
+.loginButton,
+.registerButton {
+  margin-left: 1rem;
+  margin-top: 3rem;
+  width: 29.3rem;
+  height: 3.43rem;
+  background-color: #17a2b8;
+  border: solid white;
+  border-radius: 5rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+}
+
+.registerButton {
+  margin-top: 0%;
+  background-color: #fff;
+  border: solid #17a2b8;
+  color: #17a2b8
+}
+
+.noAccount {
+  width: 12rem;
+  height: 1.625rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1rem;
+  text-align: left;
+  color: #828282;
+}
+
+.error1, .error2{
+  margin:0%;
+  padding:0%;
+  color:red;
+  font-family: "Open Sans", sans-serif;
+  text-align: left;
+  margin-right:auto;
+  margin-left: 1rem;
+}
+
+.error1{
+  margin-left:2rem;
+}
+
+.ps, .em{
+  display: flex;
+  flex-direction: column;
+  margin: 0%;
+  padding: 0%;
+}
+
