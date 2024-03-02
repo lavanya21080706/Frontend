@@ -77,7 +77,7 @@ const naviagtefunction =()=>{
     <div className={styles.container}>
       <LeftContainer/>
        <div className={styles.rightContainer}>
-        <p id={styles.login}>Login</p>
+        <p className={styles.login}>Login</p>
         <div className={styles.form}>
           <form>
             <div>
@@ -109,12 +109,12 @@ const naviagtefunction =()=>{
               <p className={styles.error}>{errors.password}</p>
             </div>
            
-            <button className={styles.button} onClick={(e) => handleSubmit(e)}>
+            <button className={styles.loginButton} onClick={(e) => handleSubmit(e)}>
             Log in
             </button>
           </form>
-          <p className={styles.existaccount}>  Have no account yet?</p>
-          <button className={styles.registerButton} onClick={naviagtefunction}>   Register</button>
+          <p className={styles.existaccount}>Have no account yet?</p>
+          <button className={styles.registerButton} onClick={naviagtefunction}>Register</button>
         </div>
     </div>
     </div>

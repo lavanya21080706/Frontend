@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-#sectionname {
+.sectionName {
     width: 10vw;
     font-family: "Open Sans", sans-serif;
     font-size: 1.5rem;
@@ -13,18 +13,19 @@
     color: #000;
     display: flex;
     justify-content: flex-start;
-    margin-left:2rem;
+    margin-left: 2rem;
 }
 
 .container {
     display: flex;
 }
 
-.leftblock,
-.rightblock {
+.leftContainer,
+.rightContainer {
     width: 30vw;
     margin-top: 5%;
-    margin-left: 5%; /* Adjusted for better responsiveness */
+    margin-left: 5%;
+    /* Adjusted for better responsiveness */
     flex-grow: 0;
     background-color: rgba(69, 150, 237, 0.1);
     box-shadow: 0 0 10px rgba(69, 150, 237, 0.5);
@@ -32,44 +33,52 @@
     padding-bottom: 2.5%;
 }
 
-.ellipse {
+.circle {
     margin-top: 2.5%;
     margin-left: 5%;
     justify-content: flex-start;
-    display: flex; /* This might be unnecessary depending on the rest of your styling */
-    align-items: center; /* Align items vertically in the center */
+    display: flex;
+    /* This might be unnecessary depending on the rest of your styling */
+    align-items: center;
+    /* Align items vertically in the center */
 }
-.serialno {
-    width: 1rem; /* Adjust the size as needed */
-    height: 1rem; /* Equal width and height for a circle */
+
+.status,
+.priorityBox {
+    width: 1rem;
+    /* Adjust the size as needed */
+    height: 1rem;
+    /* Equal width and height for a circle */
     background-color: #90c4cc;
-    border-radius: 50%; /* Use 50% for a circle */
-    
+    border-radius: 50%;
+    /* Use 50% for a circle */
+
 }
 
 
-#data {
-   
+.task,
+.priority {
     flex-grow: 1;
     display: flex;
     justify-content: flex-start;
     margin-left: 3%;
     flex-grow: 0;
-  font-family: OpenSans;
-  font-size: 1.4rem;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: left;
-    
+    font-family: OpenSans;
+    font-size: 1.4rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+
 }
 
 
 
-#datacount {
-   
+.taskCount,
+.priorityCount {
+
     flex-grow: 1;
     display: flex;
     justify-content: flex-end;
@@ -80,5 +89,5 @@
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
-  
+
 }

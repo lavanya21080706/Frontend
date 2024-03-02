@@ -15,7 +15,7 @@
   margin: 2rem 2rem 2rem 2rem;
 }
 
-#login {
+.login {
   margin-top: 23vh;
   display: flex;
   justify-content: center;
@@ -75,7 +75,7 @@ input::placeholder {
   text-indent: 30px;
 }
 
-.button {
+.loginButton {
   display: flex;
   justify-content: center;
   align-items: center;

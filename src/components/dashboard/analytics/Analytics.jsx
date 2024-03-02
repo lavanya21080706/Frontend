@@ -32,50 +32,50 @@ function Analytics() {
 
     return (
         <div>
-        <p id={styles.sectionname}>Analytics</p>
+        <p className={styles.sectionName}>Analytics</p>
         <div className={styles.container}>
-            <div className={styles.leftblock}>
-                <div className={styles.ellipse}>
-                    <span className={styles.serialno}></span>
-                    <span id={styles.data}>Backlog Tasks</span>
-                    <span id={styles.datacount}>{data.Backlog}</span>
+            <div className={styles.leftContainer}>
+                <div className={styles.circle}>
+                    <span className={styles.status}></span>
+                    <span className={styles.task}>Backlog Tasks</span>
+                    <span className={styles.taskCount}>{data.Backlog}</span>
                 </div>
-                <div className={styles.ellipse}>
-                <span className={styles.serialno}></span>
-                    <span id={styles.data}>To-do Tasks</span>
-                    <span id={styles.datacount}>{data.Todo}</span>
+                <div className={styles.circle}>
+                <span className={styles.status}></span>
+                    <span className={styles.task}>To-do Tasks</span>
+                    <span className={styles.taskCount}>{data.Todo}</span>
                 </div>
-                <div className={styles.ellipse}>
-                <span className={styles.serialno}></span>
-                    <span id={styles.data}>In-Progress Tasks</span>
-                    <span id={styles.datacount}>{data.Inprogress}</span>
+                <div className={styles.circle}>
+                <span className={styles.status}></span>
+                    <span className={styles.task}>In-Progress Tasks</span>
+                    <span className={styles.taskCount}>{data.Inprogress}</span>
                 </div>
-                <div className={styles.ellipse}>
-                <span className={styles.serialno}></span>
-                    <span id={styles.data}>Completed Tasks</span>
-                    <span id={styles.datacount}>{data.Done}</span>
+                <div className={styles.circle}>
+                <span className={styles.status}></span>
+                    <span className={styles.task}>Completed Tasks</span>
+                    <span className={styles.taskCount}>{data.Done}</span>
                 </div>
             </div>
-            <div className={styles.rightblock}>
-            <div className={styles.ellipse}>
-                <span className={styles.serialno}></span>
-                    <span id={styles.data}>Low Priority</span>
-                    <span id={styles.datacount}>{data.lowPriority}</span>
+            <div className={styles.rightContainer}>
+            <div className={styles.circle}>
+                <span className={styles.priorityBox}></span>
+                    <span className={styles.priority}>Low Priority</span>
+                    <span className={styles.priorityCount}>{data.lowPriority}</span>
                 </div>
-                <div className={styles.ellipse}>
-                <span className={styles.serialno}></span>
-                    <span id={styles.data}>Moderate Priority</span>
-                    <span id={styles.datacount}>{data.moderatePriority}</span>
+                <div className={styles.circle}>
+                <span className={styles.priorityBox}></span>
+                    <span className={styles.priority}>Moderate Priority</span>
+                    <span className={styles.priorityCount}>{data.moderatePriority}</span>
                 </div>
-                <div className={styles.ellipse}>
-                <span className={styles.serialno}></span>
-                    <span id={styles.data}>High Priority</span>
-                    <span id={styles.datacount}>{data.highPriority}</span>
+                <div className={styles.circle}>
+                <span className={styles.priorityBox}></span>
+                    <span className={styles.priority}>High Priority</span>
+                    <span className={styles.priorityCount}>{data.highPriority}</span>
                 </div>
-                <div className={styles.ellipse}>
-                <span className={styles.serialno}></span>
-                    <span id={styles.data}>Due Date Tasks</span>
-                    <span id={styles.datacount}>{data.IncompleteDuetasks}</span>
+                <div className={styles.circle}>
+                <span className={styles.priorityBox}></span>
+                    <span className={styles.priority}>Due Date Tasks</span>
+                    <span className={styles.priorityCount}>{data.IncompleteDuetasks}</span>
                 </div>
             </div>
         </div>
