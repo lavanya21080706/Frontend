@@ -34,8 +34,8 @@ function MyCalendar({ onSelectDueDate, selectedDate }) { // renaming the functio
         <div className={styles.calendar}>
             <CalendarComponent onChange={handleSelectDate} value={value} className={styles.custom} />
             <div className={styles.buttons}>
-                <span onClick={handleTodayClick} className={styles.clear}>Clear</span>
-                <span onClick={handleClearClick} className={styles.save}>Today</span>
+                <span onClick={handleClearClick} className={styles.clear}>Clear</span>
+                <span  onClick={handleTodayClick}  className={styles.save}>Today</span>
             </div>
             <p>{value ? formatDate(value) : 'Select a date'}</p>
         </div>

@@ -8,13 +8,26 @@ import logoutIcon from '../../../assets/images/logoutIcon.png'
 import Board from '../board/Board'
 import Analytics from '../analytics/Analytics'
 import Settings from '../settings/Settings'
+import Logout from '../logout/Logout';
 
 function Homepage() {
+    // const navigate = useNavigate();
     const [selectedComponent, setSelectedComponent] = useState('Board')
+    const [data, setdata] = useState(true);
+    const [background, backgroundupdate] = useState(false);
 
     const handleComponentChange = (componentName) => {
         setSelectedComponent(componentName);
     };
+
+    const logout = () => {
+        setdata(false);
+        backgroundupdate(true);
+      };
+      const cancel = (message) => {
+        setdata(message);
+        backgroundupdate(false);
+      };
 
     return (
         <div className={styles.container}>
@@ -36,8 +49,8 @@ function Homepage() {
                     <p className={`${styles.settings_text} ${selectedComponent === 'Settings' ? styles.selectedText : ''}`}>Settings</p>
                 </div>
                 <div className={styles.logout}>
-                    <img src={logoutIcon} alt='Logout_Icon' className={styles.logoutIcon} />
-                    <p className={styles.logout_text}>Logout</p>
+                    <img src={logoutIcon} alt='Logout_Icon' className={styles.logoutIcon} onClick={logout}/>
+                    <p className={styles.logout_text}  onClick={logout}>Logout</p>
                 </div>
             </div>
             <div className={styles.rightContainer}>
@@ -45,6 +58,7 @@ function Homepage() {
                 {selectedComponent === 'Analytics' && <Analytics />}
                 {selectedComponent === 'Settings' && <Settings/>}
             </div>
+            {!data && <Logout cancellation={cancel} />}
         </div>
     )
 }

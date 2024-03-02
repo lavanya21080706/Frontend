@@ -1,42 +1,152 @@
-import React from 'react'
-import style from './Register.module.css'
-import mailIcon from '../../assets/images/mailIcon.png'
-import lock from '../../assets/images/lock.png'
-import view from '../../assets/images/view.png'
-import profile from '../../assets/images/profile.png'
-import LeftContainer from '../leftContainer/LeftContainer'
+import React, { useState } from 'react';
+import styles from './Register.module.css';
+import Eyeicon from '../../assets/images/view.png';
+import LeftContainer from '../leftContainer/LeftContainer';
+import { userRegistration } from '../../apis/Auth';
+import { useNavigate } from "react-router-dom";
 
-function Register() {
+function Register() {  
+  const navigate=useNavigate()
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [data, setData] = useState({
+    name:'',
+    email:'',
+    password:'',
+    confirmPassword:'',
+  });
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+  });
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+
+  const toggleConfirmPasswordVisibility = () => {
+    setShowConfirmPassword(!showConfirmPassword);
+  };
+  const handlechange = (e) => {
+    setData({ ...data, [e.target.name]:e.target.value });
+  };
+  const handleSubmit = async(e) => {
+    e.preventDefault();
+  
+    // Validate each field
+    const newErrors = {};
+    let hasErrors = false;
+  
+    if (!data.name) {
+      newErrors.name = "Name is required";
+      hasErrors = true;
+    }
+  
+    if (!data.email) {
+      newErrors.email = "Email is required";
+      hasErrors = true;
+    }
+  
+    if (!data.password) {
+      newErrors.password = "Password is required";
+      hasErrors = true;
+    }
+  
+    if (!data.confirmPassword) {
+      newErrors.confirmPassword = "Confirm Password is required";
+      hasErrors = true;
+    }
+  
+    if (hasErrors) {
+      setErrors(newErrors);
+      return;
+    }
+    const response = await userRegistration({...data})
+   
+    console.log(response)
+    if (response && response.success) {
+      localStorage.setItem('token', response.token);
+      localStorage.setItem('username', response.name);
+      navigate('/');
+  }
+  }
+const navigatefunction=()=>{
+  navigate('/login')
+}
   return (
-    <div className={style.container}>
+    <div className={styles.container}>
       <LeftContainer/>
-      <div className={style.rightContainer}>
-        <p className={style.register}>Register</p>
-        <div className={style.nameContainer}>
-          <input type='text' placeholder='Name' className={style.name} />
-          <img src={profile} alt='profile_icon' className={style.profileIcon} />
+      <div className={styles.rightContainer}>
+        <p className={styles.register}>Register</p>
+        <div className={styles.form}>
+          <form>
+            <div>
+              <input
+                type="text"
+                value={data.name}
+                name="name"
+                placeholder="Name"
+                className={styles.name}
+                onChange={handlechange}
+              />
+              <p className={styles.error}>{errors.name}</p>
+            </div>
+            <div>
+              <input
+                type="email"
+                placeholder="Email"
+                name="email"
+                className={styles.email}
+                value={data.email}
+                onChange={handlechange}
+              />
+              <p className={styles.error}>{errors.email}</p>
+            </div>
+            <div className={`${styles.inputContainer} ${styles.passwordContainer}`}>
+              <input
+                type={showPassword ? "text" : "password"}
+                placeholder="Password"
+                className={styles.password}
+                name="password"
+                value={data.password}
+                onChange={handlechange}
+              />
+              <img
+                src={Eyeicon}
+                alt="Toggle Password Visibility"
+                className={`${styles.eyeIcon} ${styles.inputIcon}`}
+                onClick={togglePasswordVisibility}
+              />
+              <p className={styles.error}>{errors.password}</p>
+            </div>
+            <div className={`${styles.inputContainer} ${styles.passwordContainer}`}>
+              <input
+                type={showConfirmPassword ? "text" : "password"}
+                placeholder="Confirm Password"
+                name="confirmPassword"
+                className={styles.confirmPassword}
+                value={data.confirmPassword}
+                onChange={handlechange}
+              />
+              <img
+                src={Eyeicon}
+                alt="Toggle confirmPassword Visibility"
+                className={`${styles.eyeIcon} ${styles.inputIcon}`}
+                onClick={toggleConfirmPasswordVisibility}
+              />
+              <p className={styles.error}>{errors.confirmPassword}</p>
+            </div>
+            <button className={styles.registerButton} onClick={(e) => handleSubmit(e)}>
+              Register
+            </button>
+          </form>
+          <p className={styles.account}> Have an account ?</p>
+          <button className={styles.loginButton}onClick={navigatefunction}>Log in</button>
         </div>
-        <div className={style.emailContainer}>
-          <input type='text' placeholder='Email' className={style.email} />
-          <img src={mailIcon} alt='mail_icon' className={style.mailIcon} />
-        </div>
-        <div className={style.confirmPasswordContainer}>
-          <img src={lock}  alt="lock_icon" className={style.lockIcon}/>
-          <input type="text" placeholder="Confirm Password" className={style.confirmPassword} />
-          <img src={view} alt="view_icon" className={style.viewIcon}  />
-        </div>
-        <div className={style.passwordContainer}>
-          <img src={lock}  alt="lock_icon" className={style.lockIcon}/>
-          <input type="text" placeholder="Password" className={style.password} />
-          <img src={view} alt="view_icon" className={style.viewIcon}  />
-        </div>
-        
-        <button className={style.registerButton}>Register</button>
-        <p className={style.account}>Have an account ?</p>
-        <button className={style.loginButton}>Log in</button>
       </div>
     </div>
-  )
+  );
 }
 
 export default Register;

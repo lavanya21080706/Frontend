@@ -6,21 +6,6 @@
   overflow: hidden;
 }
 
-.loginText {
-  font-family: "Open Sans", sans-serif;
-  font-size: 2rem;
-  margin-top: 7rem;
-  margin-bottom: 3rem;
-  padding: 0%;
-  font-weight: 600;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: left;
-  color: #343434;
-}
-
 .rightContainer {
   display: flex;
   flex-direction: column;
@@ -30,111 +15,174 @@
   margin: 2rem 2rem 2rem 2rem;
 }
 
-.emailContainer {
-  position: relative;
-  width: 30rem;
-  height: 4rem;
-  margin-top: 0%;
-  /* margin-bottom: 1rem; */
-  margin-left: 2rem;
-}
-
-.email,
-.password {
-  width: 25rem;
-  height: 3.1rem;
-  margin-left: 1rem;
-  border: solid #d0d0d0;
-  border-radius: 1rem;
-  padding-left: 3.5rem;
+#login {
+  margin-top: 23vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "Open Sans", sans-serif;
-  font-size: 1rem;
-  color: black;
+  font-size: 1.8rem;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #343434;
+
 }
 
-.email {
-  position: absolute;
-  margin-left: 0%;
+.form {
+  margin-top: 5%;
+  border-radius: 11px;
+  max-width: 22rem;
+  /* Added max-width to limit the form width */
+  width: 100%;
+  /* Ensure the form takes full width */
+  box-sizing: border-box;
+  /* Include padding and border in the width calculation */
 }
 
-.mailIcon {
-  position: absolute;
-  margin-top: 1.7rem;
-  left: 1rem;
-  transform: translateY(-50%);
+.name,
+.email,
+.password,
+.confirmPassword {
+  margin: 3%;
+  padding: 5%;
+  border: solid 1px #d0d0d0;
+  border-radius: 11px;
+  width: 100%;
+  /* Ensure the input fields take full width */
+  box-sizing: border-box;
+  /* Include padding and border in the width calculation */
+  text-indent: 30px;
+  align-self: stretch;
+
+
+
 }
 
-.passwordContainer {
-  position: relative;
-  display: inline-block;
-  margin-top: 1rem; 
+input::placeholder {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15.3px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #828282;
+  text-indent: 30px;
 }
 
-.lockIcon {
-  position: absolute;
-  margin-top: 0.5rem;
-  margin-left: 2rem
-}
-
-
-.viewIcon {
-  position: absolute;
-  right: 0;
-  top: 0;
-  margin-top: 0.6rem;
-  margin-right: 1rem;
-}
-
-
-.loginButton,
-.registerButton {
-  margin-left: 1rem;
-  margin-top: 3rem;
-  width: 29.3rem;
-  height: 3.43rem;
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1vw;
+  font-family: "Open Sans", sans-serif;
+  padding: 4%;
+  border: solid 1px #d0d0d0;
+  border-radius: 11px;
+  width: 100%;
+  /* Ensure the input fields take full width */
+  box-sizing: border-box;
+  /* Include padding and border in the width calculation */
+  border-radius: 55px;
   background-color: #17a2b8;
-  border: solid white;
-  border-radius: 5rem;
+  color: aliceblue;
+}
+
+.registerButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1vw;
+  padding: 4%;
+  border: solid 1px #17a2b8;
+  border-radius: 11px;
+  width: 100%;
+  /* Ensure the input fields take full width */
+  box-sizing: border-box;
+  /* Include padding and border in the width calculation */
+  border-radius: 55px;
+  flex-grow: 0;
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
   text-align: center;
-  color: #fff;
-}
-
-.registerButton {
-  margin-top: 0%;
+  color: #17a2b8;
   background-color: #fff;
-  border: solid #17a2b8;
-  color: #17a2b8
 }
 
-.noAccount {
-  width: 12rem;
-  height: 1.625rem;
+.existaccount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15%;
+  flex-grow: 0;
   font-family: "Open Sans", sans-serif;
-  font-size: 1.1rem;
+  font-size: 17px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
   text-align: left;
   color: #828282;
 }
 
-.error1, .error2{
-  margin:0%;
-  padding:0%;
-  color:red;
-  font-family: "Open Sans", sans-serif;
-  text-align: left;
-  margin-right:auto;
-  margin-left: 1rem;
+input.name {
+  background-image: url('../../assets/images/profile.png');
+  /* all icons in a single file */
+  background-repeat: no-repeat;
+  background-position: 10px;
+  /* position of the right icon */
+  background-size: 1.7em;
 }
 
-.error1{
-  margin-left:2rem;
+input.email {
+  background-image: url('../../assets/images/mailIcon.png');
+  /* all icons in a single file */
+  background-repeat: no-repeat;
+  background-position: 10px;
+  /* position of the right icon */
+  background-size: 1.7em;
 }
 
-.ps, .em{
-  display: flex;
-  flex-direction: column;
+input.password,
+.confirmPassword {
+  background-image: url('../../assets/images/lock.png');
+  /* all icons in a single file */
+  background-repeat: no-repeat;
+  background-position: 10px;
+  /* position of the right icon */
+  background-size: 1.7em;
+}
+
+.inputContainer {
+  position: relative;
+}
+
+.inputIcon {
+  position: absolute;
+  top: 50%;
+  right: 1px;
+  /* Adjust the right spacing as needed */
+  transform: translateY(-50%);
+  cursor: pointer;
+  width: 1.7vw;
+
+
+}
+
+.error {
   margin: 0%;
   padding: 0%;
+  margin-left:1rem;
+  color: red
 }
-

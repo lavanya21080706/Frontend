@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,600;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+.maincontainer {
+  display: flex;
+  justify-content: center;
+  /* margin-top:20%; */
+  align-items: center;
+  position: absolute;
+  /* margin-left: 42%; */
+  
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(48, 61, 67, 0.55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ 
+ 
+
+
+.container{
+    display: flex;
+   /* justify-content: space-around;
+   align-items: space-around; */
+    background-color:#fff ;
+    flex-direction: column;
+    justify-content: center;
+    width:20vw;
+    border-radius: 10.9px;
+    /* border: solid 1px #cf3636; */
+    flex-grow: 0;
+  margin: 10px 0 0;
+  padding: 17px 6.7px 17px 6.7px;
+
+ 
+    
+}
+.text{
+     font-family: "Noto Sans", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+   padding: 2%;
+
+    
+}
+.logout, .cancel{
+    width:20vw;
+    height:5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.3rem;
+    border:0.1rem solid #17a2b8;
+    box-shadow: 0 0.2rem 0.7rem 0 rgba(130, 105, 140, 0.2);
+    background-color: #17a2b8;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    color: #fff;
+    margin-top: 1rem;
+
+ 
+}
+.cancel{
+    background-color: #fff;
+    border:0.1rem solid #cf3636;
+    color:#cf3636
+}
